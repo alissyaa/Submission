@@ -5,14 +5,14 @@ import streamlit as st
 
 sns.set(style='dark')
 
-geolocation_df = pd.read_csv("geolocation.csv")
-items_df        = pd.read_csv("items.csv")
-orders_df       = pd.read_csv("orders.csv")
-payments_df     = pd.read_csv("payments.csv")
-products_df     = pd.read_csv("products.csv")
-reviews_df      = pd.read_csv("reviews.csv")
-customers_df    = pd.read_csv("customers.csv")
-sellers_df      = pd.read_csv("sellers.csv")
+geolocation_df = pd.read_csv("dashboard/geolocation.csv")
+items_df        = pd.read_csv("dashboard/items.csv")
+orders_df       = pd.read_csv("dashboard/orders.csv")
+payments_df     = pd.read_csv("dashboard/payments.csv")
+products_df     = pd.read_csv("dashboard/products.csv")
+reviews_df      = pd.read_csv("dashboard/reviews.csv")
+customers_df    = pd.read_csv("dashboard/customers.csv")
+sellers_df      = pd.read_csv("dashboard/sellers.csv")
 
 for col in ["order_purchase_timestamp", "order_delivered_customer_date", "order_estimated_delivery_date"]:
     orders_df[col] = pd.to_datetime(orders_df[col])
